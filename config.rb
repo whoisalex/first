@@ -5,6 +5,8 @@ $stdout.sync = true
 
 
 configure do
+  set :instagram_client_id, ENV['INSTAGRAM_CLIENT_ID']
+  set :instagram_client_secret, ENV['INSTAGRAM_CLIENT_SECRET']
 end
 
 
