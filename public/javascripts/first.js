@@ -6,8 +6,13 @@ $(function() {
 		var lon = position.coords.longitude;
 		$.get('/photos', {lat: lat, lon: lon}, showPhotos);
 	}
-	
+
 	function showPhotos(photos) {
-		console.log(photos);
+		if (photos.length == 0) {
+			return;
+		}
+		var photo = photos.splice(0, 1)[0];
+		$('#photos').append('<img src="' + photo.images.standard_resolution.url + '"/>')
+		showPhotos(photos);
 	}
 });
