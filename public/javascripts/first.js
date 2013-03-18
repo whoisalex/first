@@ -12,7 +12,7 @@ $(function() {
 			return;
 		}
 		var photo = photos.splice(0, 1)[0];
-		$('#photos').append('<img src="' + photo.images.standard_resolution.url + '"/>')
+		$('#photos').append('<img src="' + photo.images.thumbnail.url + '" />');
 		showPhotos(photos);
 	}
 });
