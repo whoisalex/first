@@ -1,0 +1,17 @@
+!!!
+
+%html{lang: "en"}
+  %head
+    %title FiatLux
+    %meta{charset: "utf-8"}
+    %meta{name: "description", content: "First app"}
+
+  %body	
+    =yield
+
+    =surround "<!--[if lt IE 9]>", "<![endif]-->" do
+      %script{src: "http://code.jquery.com/jquery-1.9.1.js"}
+    =surround "<!--[if gte IE 9]><!-->", "<!--[endif]-->" do
+      %script{src: "http://code.jquery.com/jquery-2.0.0b1.js"}
+
+    %script{src: url("/javascripts/first.js")}
