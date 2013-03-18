@@ -10,3 +10,6 @@ gem 'thin'
 # Database
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
+
+# APIs
+gem 'instagram'
